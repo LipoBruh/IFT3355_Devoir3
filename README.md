@@ -77,36 +77,6 @@ That's it !
 
 
 
-## Notes on SciKit-Learn
-
-#### Data
-
-- X : Info about our entities
-- Y : Entities with known attributes
-
-You can import a reference dataset with :
-```py
-from sklearn.datasets import dataset_name
-```
-
-You should be able to extact and manipulate the dataset using `load_datasetName` or similar functions. They return a dictionnary, you can filter the data by provinding arguments to the `load` function.
-
-The arguments are not standardized, but common ones are :
-
-```py
-load_datasetName(return_X_y=True)
-#return two arrays, one for X data, another for Y data
-load_datasetName(as_frame=True)
-#useful for NumPy
-```
-
-#### Models
-
-1. Create the model as a python object
-2. Make the model 'learn' with `.fit(X,Y)`
-
-
-
 
 ## Scikit Learn Wine
 
@@ -125,9 +95,9 @@ print(wine.DESCR)
 df = pd.DataFrame(wine.data, columns=wine.feature_names)
 df['label'] = wine.target
 print(df.head())
-
-
 ```
+
+
 
 
 
@@ -144,6 +114,10 @@ print(df.head())
 > Testez les modèles suivants avec leurs paramètres par défaut : Arbre de décision, Random Forest, SVM, Perceptron multicouche (MLP).
 > Calculez l’accuracy sur l’ensemble de test pour chaque modèle et présentez les résultats dans un tableau.
 
+```py
+#look for the column `mean_test_score`
+print(pd.DataFrame(model_DT.cv_results_))
+```
 
 
 ### Section 3
