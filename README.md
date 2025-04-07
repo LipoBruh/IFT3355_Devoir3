@@ -125,6 +125,19 @@ print(pd.DataFrame(model_DT.cv_results_))
 > Réduisez les dimensions avec PCA (gardez 4 composantes principales).
 > Retestez les mêmes modèles sur les données prétraitées et comparez les résultats avec ceux sans prétraitement (tableau ou graphique).
 
+`print(model_DT.best_estimator_.feature_importances_)`
+
+By using this line, we can find the best model produced by `GridSearchCV` and return an array of the columns / classes / features used to train the model. Columns with `0.` are not used, others are. 
+
+For `DecisionTreeRegressor` and `RandomForestRegressor` both give a lot of importance to these features:
+
+
+- 56-65% : Flavanoids (7)
+- 5 - 8% : Color intensity (10)
+- 1%     : Hue (11)
+- 24-27% : Proline (13)
+
+We could expect that the PCA filtering to, when asked to reduce their features to 4, give the most importance to those four and correlate the rest to them.
 
 
 ### Section 4

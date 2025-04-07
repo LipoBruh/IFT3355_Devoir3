@@ -159,6 +159,11 @@ pipe = Pipeline([
 
 
 
+Using `PCA` you reduce the size of your model by removing classes, or removing data that is ouside of a SD threshold.
+
+
+
+
 ### Metrics
 
 
