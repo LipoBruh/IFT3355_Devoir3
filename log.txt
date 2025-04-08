@@ -1,0 +1,64 @@
+
+
+
+1.1 Head of Wine DataSet
+   alcohol  malic_acid        ash  alcalinity_of_ash  magnesium  total_phenols  flavanoids  nonflavanoid_phenols  proanthocyanins  color_intensity        hue  od280/od315_of_diluted_wines     proline
+178.000000  178.000000 178.000000         178.000000 178.000000     178.000000  178.000000            178.000000       178.000000       178.000000 178.000000                    178.000000  178.000000
+ 13.000618    2.336348   2.366517          19.494944  99.741573       2.295112    2.029270              0.361854         1.590899         5.058090   0.957449                      2.611685  746.893258
+  0.811827    1.117146   0.274344           3.339564  14.282484       0.625851    0.998859              0.124453         0.572359         2.318286   0.228572                      0.709990  314.907474
+ 11.030000    0.740000   1.360000          10.600000  70.000000       0.980000    0.340000              0.130000         0.410000         1.280000   0.480000                      1.270000  278.000000
+ 12.362500    1.602500   2.210000          17.200000  88.000000       1.742500    1.205000              0.270000         1.250000         3.220000   0.782500                      1.937500  500.500000
+ 13.050000    1.865000   2.360000          19.500000  98.000000       2.355000    2.135000              0.340000         1.555000         4.690000   0.965000                      2.780000  673.500000
+ 13.677500    3.082500   2.557500          21.500000 107.000000       2.800000    2.875000              0.437500         1.950000         6.200000   1.120000                      3.170000  985.000000
+ 14.830000    5.800000   3.230000          30.000000 162.000000       3.880000    5.080000              0.660000         3.580000        13.000000   1.710000                      4.000000 1680.000000
+
+
+
+
+1.2 TESTS - NO PREPROCESSING : ACCURACY = mean_test_score
+
+ mean_fit_time  std_fit_time  mean_score_time  std_score_time params  split0_test_score  split1_test_score  split2_test_score  split3_test_score  split4_test_score  mean_test_score  std_test_score  rank_test_score
+      0.013777      0.003188         0.009588        0.006431     {}                0.0           0.759197                0.0           0.265734                0.0         0.204986        0.295601                1
+
+ mean_fit_time  std_fit_time  mean_score_time  std_score_time params  split0_test_score  split1_test_score  split2_test_score  split3_test_score  split4_test_score  mean_test_score  std_test_score  rank_test_score
+      0.344245      0.100572          0.02044        0.010092     {}                0.0           0.765205                0.0           0.764582                0.0         0.305958         0.37472                1
+
+ mean_fit_time  std_fit_time  mean_score_time  std_score_time params  split0_test_score  split1_test_score  split2_test_score  split3_test_score  split4_test_score  mean_test_score  std_test_score  rank_test_score
+      0.004104      0.002651         0.002369        0.001417     {}           0.638889           0.611111           0.638889           0.685714           0.742857         0.663492        0.046362                1
+
+ mean_fit_time  std_fit_time  mean_score_time  std_score_time params  split0_test_score  split1_test_score  split2_test_score  split3_test_score  split4_test_score  mean_test_score  std_test_score  rank_test_score
+      0.053989      0.044846         0.001128        0.000051     {}                0.0         -65.948112                0.0          -1.407889                0.0         -13.4712       26.244121                1
+
+
+
+
+Weight of Features of the Model
+
+DecisionTreeRegressor
+[0.00217721 0.         0.         0.01626776 0.         0.
+ 0.62537618 0.         0.         0.12792536 0.         0.
+ 0.22825349]
+
+RandomForestRegressor
+[3.57715319e-02 2.13878620e-03 1.31052507e-03 3.44196067e-03
+ 6.13499881e-03 6.46884414e-04 4.59179250e-01 2.08641208e-04
+ 1.73748142e-03 9.55639097e-02 2.39825828e-02 1.63300304e-01
+ 2.06583144e-01]
+
+
+
+
+1.3 - TESTS - WITH PREPROCESSING : ACCURACY = mean_test_score
+
+ mean_fit_time  std_fit_time  mean_score_time  std_score_time params  split0_test_score  split1_test_score  split2_test_score  split3_test_score  split4_test_score  mean_test_score  std_test_score  rank_test_score
+      0.004124      0.002181         0.001601        0.000299     {}                0.0           0.518395                0.0           0.265734                0.0         0.156826        0.208027                1
+
+ mean_fit_time  std_fit_time  mean_score_time  std_score_time params  split0_test_score  split1_test_score  split2_test_score  split3_test_score  split4_test_score  mean_test_score  std_test_score  rank_test_score
+      0.322969      0.084264         0.036943        0.012644     {}                0.0           0.764062                0.0           0.689834                0.0         0.290779        0.356903                1
+
+ mean_fit_time  std_fit_time  mean_score_time  std_score_time params  split0_test_score  split1_test_score  split2_test_score  split3_test_score  split4_test_score  mean_test_score  std_test_score  rank_test_score
+      0.062277      0.026882         0.017693        0.010502     {}           0.972222           0.916667           0.944444           0.971429                1.0         0.960952        0.028267                1
+
+ mean_fit_time  std_fit_time  mean_score_time  std_score_time params  split0_test_score  split1_test_score  split2_test_score  split3_test_score  split4_test_score  mean_test_score  std_test_score  rank_test_score
+       0.23985      0.054809         0.003928        0.002256     {}                0.0           0.741759                0.0           0.480869                0.0         0.244526        0.310637                1
+

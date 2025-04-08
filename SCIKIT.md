@@ -1,4 +1,5 @@
 
+# Personal notes 
 
 ## Notes on SciKit-Learn
 
@@ -269,3 +270,27 @@ The metric function takes `y_true` and `y_predicted`.
 The callable object takes `estimator`,`X`,`y` and `sample_weight`.
 
 `y_predicted` can be obtained from the estimator with `est.predict(X)`. The parameter `sample_weight` can give more importance to a single `class` parameter to have more importance in your dataset. 
+
+
+
+
+
+## Scikit Learn Wine
+
+#### Methods :
+
+```py
+#Imports
+from sklearn import datasets
+wine = datasets.load_wine()
+
+
+#Log the dataset description
+print(wine.DESCR)
+
+#Print the head of the attributes
+df = pd.DataFrame(wine.data, columns=wine.feature_names)
+df['label'] = wine.target
+print(df.head())
+```
+
